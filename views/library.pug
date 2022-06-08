@@ -1,0 +1,8 @@
+extends layout
+
+block layout-content
+    h1 #{library.querySelector('name').textContent}
+    p #{library.querySelector('address').textContent}
+    p #{library.querySelector('phoneNumber').textContent}
+    div !{library.querySelector('description').textContent}
+

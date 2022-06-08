@@ -1,0 +1,134 @@
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: #1101ed;
+}
+
+li{
+    list-style: none;
+}
+header{
+    background-color: #f8f8f8;;
+    border-bottom: 2px solid #e4efe4;
+    padding: 1.8em 4em;
+    filter: drop-shadow(0.15rem 0.15rem 0.4rem rgba(0, 0, 0, 0.1));
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+.header-content{
+    display: grid;
+    grid-template-areas: 'logo nav-links';
+}
+#logo{
+    grid-area: logo;
+    margin: 0;
+}
+.nav-links{
+    grid-area: nav-links;
+    text-align: right;
+    padding-right: 6em;
+}
+.nav-links > li{
+    display: inline-block;
+    padding-right: 30px;
+    padding-bottom: 0;
+    margin-bottom:  0;
+    font-size: 20px;
+}
+#logo > a:hover , .nav-links > li > a:hover {
+    color: #ff4c3b ;
+}
+/***
+ Main styles
+ */
+#main{
+    margin: 5.5em 4em;
+}
+.hero-content{
+    height: 650px;
+    text-align: center;
+}
+.slogan{
+    position: absolute;
+    bottom: 160px;
+}
+/**Featured items*/
+#featured-items > h2{
+ margin: 30px 0;
+}
+
+#item-list {
+    display: grid;
+    grid-template-areas: 'item-1 item-2 item-3 item-4';
+    gap: 30px;
+
+}
+.item-1{
+    grid-area: item-1;
+}
+.item-2{
+    grid-area: item-2;
+}
+.item-3{
+    grid-area: item-3;
+}
+.item-4{
+    grid-area: item-4;
+}
+.item-1 ,.item-2 , .item-3 ,.item-4{
+    border: 1px solid #dddada;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    width: 250px;
+}
+.item-1:hover ,.item-2:hover , .item-3:hover ,.item-4:hover{
+    border: 1px solid #ff4c3b;
+}
+.item-1 >figure > img , .item-2 >figure > img,
+.item-3 >figure > img , .item-4 >figure > img {
+    height: 230px;
+
+}
+.call-to-action{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 13px 29px;
+    letter-spacing: .05em;
+    border: 2px solid #ff4c3b;
+    position: relative;
+    color: #000;
+    text-transform: uppercase;
+}
+.call-to-action:hover{
+    background-color: #ff4c3b;
+    transition: .3s ease-in-out;
+}
+.call-to-action > a:hover{
+    color: white;
+}
+/**
+footer styles
+ */
+#footer{
+    background-color: #f8f8f8;;
+    border-top: 2px solid #e4efe4;
+}
+#footer > p {
+    margin: 0.5em 4em;
+    padding: 4px;
+    color: #313e50;
+}

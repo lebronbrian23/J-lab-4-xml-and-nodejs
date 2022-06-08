@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content
+    h1 Toronto Public Libraries
+
+    form(method='get' action='library')
+        label Select Library:
+        select(name='id')
+            each library in libraries
+                 - var id = library.getAttribute("id");
+                 - var lib_name = library.querySelector("name").textContent;
+                 option(value=`${id}`) #{lib_name}
+
+        button View Details
+
+
